@@ -7,6 +7,7 @@
 ## 🚀 Purpose of Amazon Redshift
 
 Redshift is designed to support three primary business intelligence functions:
+![image](https://github.com/user-attachments/assets/9a63e5a9-a81f-44b2-ad37-5e7e9890190a)
 
 - ✅ **Gather data** from various sources
 - 🔁 **Transform data** and apply **business logic**
