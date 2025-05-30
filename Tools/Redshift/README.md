@@ -17,6 +17,7 @@ Redshift is designed to support three primary business intelligence functions:
 ## 🏗️ Core Architecture
 
 Amazon Redshift leverages advanced architecture principles found in modern data warehouses:
+![image](https://github.com/user-attachments/assets/768057e2-0b8a-47d4-ab40-14e674469564)
 
 ### 1. Massively Parallel Processing (MPP)
 - Tasks are **divided and processed in parallel** by multiple compute nodes.
