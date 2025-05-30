@@ -21,6 +21,8 @@ Amazon Redshift leverages advanced architecture principles found in modern data 
 ![image](https://github.com/user-attachments/assets/768057e2-0b8a-47d4-ab40-14e674469564)
 
 ### 1. Massively Parallel Processing (MPP)
+![image](https://github.com/user-attachments/assets/0a1c86de-7501-4a4f-ba6c-3384b6f40a1e)
+
 - Tasks are **divided and processed in parallel** by multiple compute nodes.
 - A **Leader Node** handles query parsing and planning.
 - **Compute Nodes** execute the tasks, and each is split into **slices** with independent memory and storage.
