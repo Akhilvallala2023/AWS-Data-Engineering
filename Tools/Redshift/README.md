@@ -154,12 +154,6 @@ In the **EVEN** style:
 
 ---
 
-### 📊 Visual Comparison of Distribution Styles
-
-![Data Distribution Styles](./6d818054-dea1-45b3-997c-a077d0830f4d.png)
-
----
-
 ### 🧠 Summary
 
 | Distribution Style | How It Works | Pros | Cons |
