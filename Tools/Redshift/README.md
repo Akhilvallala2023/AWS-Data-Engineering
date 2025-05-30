@@ -30,6 +30,8 @@ Amazon Redshift leverages advanced architecture principles found in modern data 
 - Results are aggregated and returned to the user efficiently.
 
 ![MPP](https://github.com/user-attachments/assets/0a1c86de-7501-4a4f-ba6c-3384b6f40a1e)
+![image](https://github.com/user-attachments/assets/d03cb2bd-3672-48c5-9c36-5ae3ab0706ba)
+
 
 ---
 
