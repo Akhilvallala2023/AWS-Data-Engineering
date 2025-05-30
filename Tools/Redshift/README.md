@@ -98,6 +98,8 @@ Control how data is stored across compute nodes:
 - `EVEN`: Uniform random distribution
 - `AUTO`: Redshift chooses the best style
 
+![image](https://github.com/user-attachments/assets/25ba42c2-bf5c-40d2-9583-5768acd96493)
+
 > ⚠️ Poor key choice can cause **data skew** and slow down queries.
 
 ---
