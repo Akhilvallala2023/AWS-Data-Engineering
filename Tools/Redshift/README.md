@@ -154,7 +154,7 @@ In the **EVEN** style:
 
 ---
 
-### 🧠 Summary
+#### 🧠 Summary
 
 | Distribution Style | How It Works | Pros | Cons |
 |--------------------|--------------|------|------|
