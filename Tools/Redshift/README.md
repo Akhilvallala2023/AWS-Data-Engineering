@@ -104,6 +104,73 @@ Control how data is stored across compute nodes:
 
 ---
 
+## 🔀 Understanding Redshift Data Distribution Styles
+
+Amazon Redshift distributes table data across slices (units of parallelism in compute nodes) using **distribution styles**. These determine how rows of a table are allocated across the slices to optimize performance.
+
+---
+
+### 🗝️ KEY Distribution Style
+
+In the **KEY** style:
+
+- You define a **distribution key** column.
+- Redshift applies a **hashing algorithm** to the values in that column.
+- The **hash result** determines which slice stores each row.
+
+#### 🔧 How it works:
+1. Redshift hashes the distribution key value.
+2. Based on the hash, it assigns the row to a specific slice.
+
+#### 💡 Example:
+If `emp_name` is the key:
+- `"Mark"` → Slice 3  
+- `"Lewis"` → Slice 1  
+- `"James"` → Slice 2  
+- `"Robert"` → Slice 2 (same hash bucket)
+
+#### ⚠️ Watch Out for Skew:
+If the distribution key has low cardinality (e.g., `gender`), many rows may land in the same slice, causing **data skew** and **performance degradation**.
+
+---
+
+### 🎲 EVEN Distribution Style
+
+In the **EVEN** style:
+
+- Redshift **distributes rows in round-robin fashion** across slices.
+- This ensures **uniform data distribution**.
+
+#### 🔄 How it works:
+- Row 1 → Slice 1  
+- Row 2 → Slice 2  
+- Row 3 → Slice 3  
+- Row 4 → Slice 1 (wraps around)  
+- and so on...
+
+#### ✅ Benefit:
+- Simple and effective when **no clear key column** is appropriate.
+- Prevents skew by design.
+
+---
+
+### 📊 Visual Comparison of Distribution Styles
+
+![Data Distribution Styles](./6d818054-dea1-45b3-997c-a077d0830f4d.png)
+
+---
+
+### 🧠 Summary
+
+| Distribution Style | How It Works | Pros | Cons |
+|--------------------|--------------|------|------|
+| `KEY`              | Hashes column values to assign rows to slices | Co-locates related data | Risk of skew |
+| `EVEN`             | Round-robin row assignment | Even load distribution | No co-location benefits |
+
+Choosing the right style is crucial for **query efficiency** and **cluster balance**.
+
+---
+
 ### 📚 Sort Keys
 
 Control how data is physically sorted in storage:
