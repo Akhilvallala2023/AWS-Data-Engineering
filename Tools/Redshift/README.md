@@ -49,11 +49,11 @@ Amazon Redshift leverages advanced architecture principles found in modern data 
 
 ---
 
-## 🧱 Columnar Storage Strategy in Redshift
+#### 🧱 Columnar Storage Strategy in Redshift
 
 A **columnar database** stores data **by column**, not by row. This greatly enhances performance for analytical queries.
 
-### 🔍 Traditional vs Columnar Storage
+##### 🔍 Traditional vs Columnar Storage
 
 | Row-Oriented Example | Column-Oriented Example |
 |----------------------|-------------------------|
@@ -65,13 +65,13 @@ Each storage block in Redshift contains **values of a single column**, not a mix
 
 ---
 
-### 🚀 Benefits of Columnar Storage
+##### 🚀 Benefits of Columnar Storage
 
-#### ✅ Efficient Reads
+###### ✅ Efficient Reads
 
 - Only the required column blocks are read → **faster query performance** and **lower I/O**.
 
-#### 📦 Better Compression
+###### 📦 Better Compression
 
 - Data within a column block is uniform → **higher compression ratios**.
 - Redshift uses specialized encodings:
@@ -79,7 +79,7 @@ Each storage block in Redshift contains **values of a single column**, not a mix
 
 ---
 
-### 🏗️ Columnar Storage Optimized by Redshift
+###### 🏗️ Columnar Storage Optimized by Redshift
 
 - Uses **1 MB block sizes** (compared to 2–64 KB in traditional RDBMS).
 - Each column block uses data-type-specific compression.
