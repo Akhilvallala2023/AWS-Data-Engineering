@@ -75,13 +75,34 @@ Creating domain-specific data marts in **Amazon Redshift** for business reportin
 
 ---
 
+## ⚡ 5. Real-Time Data Processing with Kinesis
+
+**Overview**  
+Designing pipelines that process streaming data in near real-time using **Amazon Kinesis** and other AWS services. Common use cases include clickstream analysis, real-time alerts, and log processing.
+
+**Key Tasks**
+- Capture and ingest streaming data using **Kinesis Data Streams** or **Firehose**
+- Use **Kinesis Data Analytics** or **AWS Lambda** to process and transform data in real-time
+- Deliver transformed data to **Amazon S3**, **Redshift**, or **OpenSearch** for further analysis or dashboarding
+- Implement retry logic, dead-letter queues, and monitoring for stream robustness
+
+**Services Used**
+- Amazon Kinesis (Data Streams, Firehose, Data Analytics)
+- AWS Lambda
+- Amazon S3 / Redshift / OpenSearch
+- Amazon CloudWatch for stream monitoring
+
+---
+
 ## 🧰 Tools & Technologies
 
-- **Compute & Processing**: AWS Glue, Amazon EMR
+- **Compute & Processing**: AWS Glue, Amazon EMR, AWS Lambda
+- **Streaming & Real-time**: Amazon Kinesis, Kinesis Data Analytics
 - **Storage**: Amazon S3, Redshift, Apache Hudi
 - **Orchestration**: Amazon MWAA (Airflow)
 - **Transformation**: SQL, Python, Spark
 - **Visualization**: QuickSight, Tableau
+- **Monitoring**: Amazon CloudWatch, SNS
 
 ---
 
