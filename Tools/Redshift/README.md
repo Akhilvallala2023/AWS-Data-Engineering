@@ -232,4 +232,6 @@ Amazon Redshift enables cloud-scale analytics through:
 
 Redshift is the **cornerstone of modern cloud data platforms**, helping businesses transform raw data into powerful, actionable insights.
 
+Watch the explanation video on [YouTube](https://www.youtube.com/watch?v=dmsuzIOzmIs).
+
 ---
