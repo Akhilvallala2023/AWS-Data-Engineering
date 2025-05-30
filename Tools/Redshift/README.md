@@ -104,13 +104,13 @@ Control how data is stored across compute nodes:
 
 ---
 
-## 🔀 Understanding Redshift Data Distribution Styles
+#### 🔀 Understanding Redshift Data Distribution Styles
 
 Amazon Redshift distributes table data across slices (units of parallelism in compute nodes) using **distribution styles**. These determine how rows of a table are allocated across the slices to optimize performance.
 
 ---
 
-### 🗝️ KEY Distribution Style
+##### 🗝️ KEY Distribution Style
 
 In the **KEY** style:
 
@@ -118,18 +118,18 @@ In the **KEY** style:
 - Redshift applies a **hashing algorithm** to the values in that column.
 - The **hash result** determines which slice stores each row.
 
-#### 🔧 How it works:
+##### 🔧 How it works:
 1. Redshift hashes the distribution key value.
 2. Based on the hash, it assigns the row to a specific slice.
 
-#### 💡 Example:
+##### 💡 Example:
 If `emp_name` is the key:
 - `"Mark"` → Slice 3  
 - `"Lewis"` → Slice 1  
 - `"James"` → Slice 2  
 - `"Robert"` → Slice 2 (same hash bucket)
 
-#### ⚠️ Watch Out for Skew:
+##### ⚠️ Watch Out for Skew:
 If the distribution key has low cardinality (e.g., `gender`), many rows may land in the same slice, causing **data skew** and **performance degradation**.
 
 ---
